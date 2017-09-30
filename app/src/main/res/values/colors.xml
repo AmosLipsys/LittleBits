@@ -10,4 +10,8 @@
     <color name="colorTextHeadings">#000000</color>
     <color name="colorTextNormal">#0b5364</color>
     <color name="colorTextLight">#57e0f9</color>
+
+    <color name="colorError">#d70808</color>
+    <color name="colorWarning">#ffd500</color>
+    <color name="colorAllClear">#11e980</color>
 </resources>

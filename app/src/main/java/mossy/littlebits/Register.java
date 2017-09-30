@@ -2,8 +2,10 @@ package mossy.littlebits;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.content.res.ColorStateList;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -42,6 +44,7 @@ public class Register extends AppCompatActivity {
         loginDAO = new LoginDAOHelper(this);
 
 
+        // Shows Password
         check_show_password.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -57,7 +60,6 @@ public class Register extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence cs, int arg1, int arg2, int arg3) {
-
             }
 
             @Override
@@ -81,25 +83,28 @@ public class Register extends AppCompatActivity {
                 if (password.matches(getString(R.string.number))) {
                     progress += 15;
                 }
-                ;
                 // If password contains a lowercase
                 if (password.matches(getString(R.string.lowerCase))) {
                     progress += 15;
                 }
-                ;
                 // If password contains a uppercase
                 if (password.matches(getString(R.string.upperCase))) {
                     progress += 15;
                 }
-                ;
                 int colour;
-                if (progress < 45) {
-
-                    password_progress.setProgress(progress);
+                if (progress > 75) {
+                    colour = Color.GREEN;
                 }
+                else if (progress > 45) {
+                    colour = Color.YELLOW ;
+                }
+                else {
+                    colour = Color.RED;
+                }
+                password_progress.setProgress(progress);
+                password_progress.setProgressTintList(ColorStateList.valueOf(colour));
             }
         });
-
 
         butt_register.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -138,6 +143,19 @@ public class Register extends AppCompatActivity {
                     show_keyboard();
                     error_message = error_message + "\nPassword is too small: < 5";
                 }
+
+                // Username is already taken
+                Cursor cursor = loginDAO.getReadableDatabase()
+                        .rawQuery("select username from users", null);
+                while (cursor.moveToNext()) {
+                    if(cursor.getString(0).equals(username)){
+                        error_message = error_message + "\nUsername is already taken";
+                        edit_username.requestFocus();
+                        show_keyboard();
+                    }
+                }
+                cursor.close();
+
                 // Show Error Message
                 if (!error_message.toString().isEmpty()) {
                     error_message = "Would you kindly fix the following problems: \n" + error_message;
@@ -147,11 +165,12 @@ public class Register extends AppCompatActivity {
                     add_user(username, password);
                     CharSequence message;
 
-                    Cursor cursor = loginDAO.getReadableDatabase()
+                    // Print usernames;
+                    cursor = loginDAO.getReadableDatabase()
                             .rawQuery("select * from users", null);
                     while (cursor.moveToNext()) {
                         message = ("id: " + cursor.getString(0)
-                                + "username: " + cursor.getString(1)+ "password" + cursor.getString(2));
+                                + "\nusername: " + cursor.getString(1)+ "\npassword: " + cursor.getString(2));
                         make_toast(message);
                     }
                     cursor.close();
@@ -190,6 +209,4 @@ public class Register extends AppCompatActivity {
         Toast toast = Toast.makeText(context, message, duration);
         toast.show();
     }
-
-
 }
