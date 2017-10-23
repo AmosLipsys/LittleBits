@@ -5,13 +5,33 @@
     <color name="colorAccent">#FF4081</color>
 
     <color name="colorButtMain">#09c25c</color>
-    <color name="colorButtSecondary">#1ff57f</color>
+    <color name="colorButtSecondary">#00bfe1</color>
 
     <color name="colorTextHeadings">#000000</color>
     <color name="colorTextNormal">#0b5364</color>
     <color name="colorTextLight">#57e0f9</color>
 
+
+    <color name="colorButtTutorial">#d1ffd5</color>
+    <color name="colorButtBeginner">#95ff9e</color>
+    <color name="colorButtAdvanced">#4efd5d</color>
+    <color name="colorButtExpert">#07a915</color>
+
+
     <color name="colorError">#d70808</color>
     <color name="colorWarning">#ffd500</color>
     <color name="colorAllClear">#11e980</color>
+
+    <color name="colorButtText">#ffffff</color>
+    <color name="colorButtTute">#fbe5a0</color>
+    <color name="colorButtAdvance">#67e558</color>
+
+    <color name="colorProgressIndeterminate">#999696</color>
+    <color name="colorProgressDone">#4680c6</color>
+
+    <color name="colorButtIfElse">#95b9d9</color>
+    <color name="colorButtForLoop">#af95d9</color>
+    <color name="colorButtWhileLoop">#d99598</color>
+
+
 </resources>

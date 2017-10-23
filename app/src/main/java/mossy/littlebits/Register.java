@@ -2,6 +2,7 @@ package mossy.littlebits;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -174,6 +175,7 @@ public class Register extends AppCompatActivity {
                         make_toast(message);
                     }
                     cursor.close();
+                    startActivity(new Intent(Register.this,GameMenu.class));
                 }
             }
         });

@@ -9,4 +9,17 @@
     <string name="create_table">CREATE TABLE %1$s (_id INTEGER PRIMARY KEY, %2$s TEXT,%3$s TEXT )</string>
     <string name="delete_table">DROP TABLE IF EXISTS %1$s</string>
     <string name="title_activity_login">Login</string>
+    <string name="title_activity_game_menu">GameMenu</string>
+    <string name="game_menu">Game Menu</string>
+    <string name="tutorial">Tutorial</string>
+    <string name="tutorialpercent">Tutorial %</string>
+    <string name="beginner">Beginner</string>
+    <string name="beginnerpercent">Beginner %</string>
+    <string name="advanced">Advanced</string>
+    <string name="advanced_percent">Advanced %</string>
+    <string name="expert">Expert</string>
+    <string name="expert_percent">Expert %</string>
+    <string name="title_activity_tutorial">Tutorial</string>
+    <string name="title_activity_if_and_else_tutorial">IfAndElseTutorial</string>
+    <string name="game_menu_title">Game Menu</string>
 </resources>

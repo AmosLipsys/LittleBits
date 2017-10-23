@@ -37,6 +37,33 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="mossy.littlebits.Home" />
         </activity>
+        <activity
+            android:name=".GameMenu"
+            android:label="@string/title_activity_game_menu"
+            android:parentActivityName=".Home"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="mossy.littlebits.Home" />
+        </activity>
+        <activity
+            android:name=".Tutorial"
+            android:label="@string/title_activity_tutorial"
+            android:parentActivityName=".GameMenu"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="mossy.littlebits.GameMenu" />
+        </activity>
+        <activity
+            android:name=".IfAndElseTutorial"
+            android:label="@string/title_activity_if_and_else_tutorial"
+            android:parentActivityName=".Tutorial"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="mossy.littlebits.Tutorial" />
+        </activity>
     </application>
 
 </manifest>
