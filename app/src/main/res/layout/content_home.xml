@@ -13,6 +13,7 @@
     >
 
     <ImageView
+        android:contentDescription="@string/LittleBitsLogo"
         android:id="@+id/logo1"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
@@ -62,6 +63,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
+        android:contentDescription="@string/Image_of_a_Kid_and_Robot"
         android:id="@+id/splash_art"
         android:layout_width="218dp"
         android:layout_height="149dp"

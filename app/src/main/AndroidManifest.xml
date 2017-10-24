@@ -98,6 +98,101 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="mossy.littlebits.Tutorial" />
         </activity>
+        <activity
+            android:name=".Beginner"
+            android:label="@string/title_activity_beginner"
+            android:parentActivityName=".GameMenu"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="mossy.littlebits.GameMenu" />
+        </activity>
+        <activity
+            android:name=".Advanced"
+            android:label="@string/title_activity_advanced"
+            android:parentActivityName=".GameMenu"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="mossy.littlebits.GameMenu" />
+        </activity>
+        <activity
+            android:name=".Expert"
+            android:label="@string/title_activity_expert"
+            android:parentActivityName=".GameMenu"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="mossy.littlebits.GameMenu" />
+        </activity>
+        <activity
+            android:name=".BeginnerIfAndElse"
+            android:label="@string/title_activity_beginner_if_and_else_menu"
+            android:parentActivityName=".Beginner"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="mossy.littlebits.Beginner" />
+        </activity>
+        <activity
+            android:name=".BeginnerForLoops"
+            android:label="@string/title_activity_beginner_for_loops"
+            android:parentActivityName=".Beginner"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="mossy.littlebits.Beginner" />
+        </activity>
+        <activity
+            android:name=".AdvancedIfAndElse"
+            android:label="@string/title_activity_advanced_if_and_else_menu"
+            android:parentActivityName=".Advanced"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="mossy.littlebits.Advanced" />
+        </activity>
+        <activity
+            android:name=".AdvancedForLoops"
+            android:label="@string/title_activity_advanced_for_loops"
+            android:parentActivityName=".Advanced"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="mossy.littlebits.Advanced" />
+        </activity>
+        <activity
+            android:name=".AdvancedWhileLoops"
+            android:label="@string/title_activity_advanced_while_loops"
+            android:parentActivityName=".Advanced"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="mossy.littlebits.Advanced" />
+        </activity>
+        <activity
+            android:name=".ExpertIfAndElse"
+            android:label="@string/title_activity_expert_if_and_else"
+            android:parentActivityName=".Expert"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="mossy.littlebits.Expert" />
+        </activity>
+        <activity
+            android:name=".ExpertForLoops"
+            android:label="@string/title_activity_expert_for_loops"
+            android:parentActivityName=".Expert"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ExpertWhileLoops"
+            android:label="@string/title_activity_expert_while_loops"
+            android:parentActivityName=".Expert"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="mossy.littlebits.Expert" />
+        </activity>
     </application>
 
 </manifest>

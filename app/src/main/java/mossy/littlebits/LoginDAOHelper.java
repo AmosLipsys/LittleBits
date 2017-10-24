@@ -4,9 +4,9 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-public class LoginDAOHelper extends SQLiteOpenHelper {
+class LoginDAOHelper extends SQLiteOpenHelper {
     private static final int VERSION = 1;
-    private Context context;
+    private final Context context;
 
     LoginDAOHelper(Context context) {
         super(context, "users.db", null, VERSION);

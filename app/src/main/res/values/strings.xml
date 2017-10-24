@@ -12,9 +12,9 @@
     <string name="title_activity_game_menu">GameMenu</string>
     <string name="game_menu">Game Menu</string>
     <string name="tutorial">Tutorial</string>
-    <string name="tutorialpercent">Tutorial %</string>
+    <string name="tutorial_percent">Tutorial %</string>
     <string name="beginner">Beginner</string>
-    <string name="beginnerpercent">Beginner %</string>
+    <string name="beginner_percent">Beginner %</string>
     <string name="advanced">Advanced</string>
     <string name="advanced_percent">Advanced %</string>
     <string name="expert">Expert</string>
@@ -26,4 +26,23 @@
     <string name="tutorial_title">Tutorial</string>
     <string name="title_activity_for_loop_tutorial">for_loop_tutorial</string>
     <string name="title_activity_while_loop_tutorial">WhileLoopTutorial</string>
+    <string name="title_activity_beginner">Beginner</string>
+    <string name="title_activity_advanced">Advanced</string>
+    <string name="title_activity_expert">Expert</string>
+    <string name="title_activity_beginner_if_and_else_menu">BeginnerIfAndElseMenu</string>
+    <string name="_1">1</string>
+    <string name="_2">2</string>
+    <string name="_3">3</string>
+    <string name="_4">4</string>
+    <string name="_5">5</string>
+    <string name="_6">6</string>
+    <string name="LittleBitsLogo">Little Bits Logo</string>
+    <string name="Image_of_a_Kid_and_Robot">Image of a Kid and Robot</string>
+    <string name="title_activity_beginner_for_loops">BeginnerForLoops</string>
+    <string name="title_activity_advanced_if_and_else_menu">AdvancedIfAndElseMenu</string>
+    <string name="title_activity_advanced_for_loops">AdvancedForLoops</string>
+    <string name="title_activity_advanced_while_loops">AdvancedWhileLoops</string>
+    <string name="title_activity_expert_if_and_else">ExpertIfAndElse</string>
+    <string name="title_activity_expert_for_loops">ExpertForLoops</string>
+    <string name="title_activity_expert_while_loops">ExpertWhileLoops</string>
 </resources>

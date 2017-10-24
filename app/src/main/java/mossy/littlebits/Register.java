@@ -21,7 +21,6 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ProgressBar;
-import android.widget.TextView;
 import android.widget.Toast;
 
 public class Register extends AppCompatActivity {
@@ -188,12 +187,12 @@ public class Register extends AppCompatActivity {
         this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
     }
 
-    public void show_keyboard(){
+    private void show_keyboard(){
         InputMethodManager imm = (InputMethodManager) getSystemService(Register.INPUT_METHOD_SERVICE);
         imm.toggleSoftInput(InputMethodManager.SHOW_FORCED, InputMethodManager.HIDE_IMPLICIT_ONLY);
     }
 
-    public void add_user(String username, String password) {
+    private void add_user(String username, String password) {
         SQLiteDatabase db = loginDAO.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put("username", username);
@@ -201,7 +200,7 @@ public class Register extends AppCompatActivity {
         db.insert("users", null, contentValues);
     }
 
-    public void make_toast(CharSequence message){
+    private void make_toast(CharSequence message){
         Context context = getApplicationContext();
         Toast toast = Toast.makeText(context, message, Toast.LENGTH_LONG);
         toast.show();

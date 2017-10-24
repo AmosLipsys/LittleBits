@@ -14,8 +14,8 @@ import com.google.android.youtube.player.YouTubePlayer.Provider;
 import com.google.android.youtube.player.YouTubePlayerView;
 
 public class WhileLoopTutorial extends YouTubeBaseActivity implements YouTubePlayer.OnInitializedListener {
-    public static final String API_KEY = "YOUR API KEY";
-    public static final String VIDEO_ID = "UV2RmC4gDMQ";
+    private static final String API_KEY = "YOUR API KEY";
+    private static final String VIDEO_ID = "UV2RmC4gDMQ";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,7 +48,7 @@ public class WhileLoopTutorial extends YouTubeBaseActivity implements YouTubePla
             player.cueVideo(VIDEO_ID);
         }
     }
-    private PlaybackEventListener playbackEventListener = new PlaybackEventListener() {
+    private final PlaybackEventListener playbackEventListener = new PlaybackEventListener() {
         @Override
         public void onBuffering(boolean arg0) {
         }
@@ -65,7 +65,7 @@ public class WhileLoopTutorial extends YouTubeBaseActivity implements YouTubePla
         public void onStopped() {
         }
     };
-    private PlayerStateChangeListener playerStateChangeListener = new PlayerStateChangeListener() {
+    private final PlayerStateChangeListener playerStateChangeListener = new PlayerStateChangeListener() {
         @Override
         public void onAdStarted() {
         }
