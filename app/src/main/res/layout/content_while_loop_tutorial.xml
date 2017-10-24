@@ -9,14 +9,14 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="mossy.littlebits.IfAndElseTutorial"
-    tools:showIn="@layout/activity_if_and_else_tutorial">
+    tools:context="mossy.littlebits.WhileLoopTutorial"
+    tools:showIn="@layout/activity_while_loop_tutorial">
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="If and Else Tutorial"
+        android:text="While Loop Tutorial"
         android:fontFamily="casual"
         android:textAppearance="@android:style/TextAppearance.Material.Large"
         android:textSize="36sp"
@@ -26,11 +26,13 @@
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginLeft="8dp" />
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp" />
 
     <com.google.android.youtube.player.YouTubePlayerView
         android:id="@+id/youtube_player"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
@@ -45,28 +47,17 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:backgroundTint="@color/colorButtSecondary"
-        android:id="@+id/back_butt"
-        android:layout_width="0dp"
+        android:id="@+id/finished_butt"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:text="Tutorial Hub"
+        android:backgroundTint="@color/colorButtSecondary"
+        android:text="Tutorial Hub (Finished Tutorial)"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/next_butt" />
+        app:layout_constraintRight_toLeftOf="parent" />
 
-    <Button
-        android:backgroundTint="@color/colorButtMain"
-        android:id="@+id/next_butt"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:text="Next(For Loops)"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toRightOf="@+id/back_butt"
-        app:layout_constraintRight_toRightOf="parent" />
 
 
 
 </android.support.constraint.ConstraintLayout>
-

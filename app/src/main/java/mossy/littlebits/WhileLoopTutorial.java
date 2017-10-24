@@ -1,5 +1,4 @@
 package mossy.littlebits;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -13,34 +12,23 @@ import com.google.android.youtube.player.YouTubePlayer.PlaybackEventListener;
 import com.google.android.youtube.player.YouTubePlayer.PlayerStateChangeListener;
 import com.google.android.youtube.player.YouTubePlayer.Provider;
 import com.google.android.youtube.player.YouTubePlayerView;
-public class IfAndElseTutorial extends YouTubeBaseActivity implements YouTubePlayer.OnInitializedListener {
+
+public class WhileLoopTutorial extends YouTubeBaseActivity implements YouTubePlayer.OnInitializedListener {
     public static final String API_KEY = "YOUR API KEY";
     public static final String VIDEO_ID = "UV2RmC4gDMQ";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_if_and_else_tutorial);
+        setContentView(R.layout.activity_while_loop_tutorial);
 
-        Button next_button = (Button) findViewById(R.id.next_butt);
-        Button back_button = (Button) findViewById(R.id.back_butt);
+        Button finished_button = (Button) findViewById(R.id.finished_butt);
 
-        next_button.setOnClickListener(new View.OnClickListener() {
+        finished_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(IfAndElseTutorial.this,ForLoopTutorial.class));
+                startActivity(new Intent(WhileLoopTutorial.this,Tutorial.class));
             }
         });
-
-        back_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(IfAndElseTutorial.this,Tutorial.class));
-            }
-        });
-
-
-
-
         // Initializing YouTube Player View
         YouTubePlayerView youTubePlayerView = (YouTubePlayerView) findViewById(R.id.youtube_player);
         youTubePlayerView.initialize(API_KEY, this);
@@ -52,7 +40,7 @@ public class IfAndElseTutorial extends YouTubeBaseActivity implements YouTubePla
     }
     @Override
     public void onInitializationSuccess(Provider provider, YouTubePlayer player, boolean wasRestored) {
-       // add listeners to YouTubePlayer instance
+        // add listeners to YouTubePlayer instance
         player.setPlayerStateChangeListener(playerStateChangeListener);
         player.setPlaybackEventListener(playbackEventListener);
         // Start buffering

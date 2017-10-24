@@ -22,4 +22,8 @@
     <string name="title_activity_tutorial">Tutorial</string>
     <string name="title_activity_if_and_else_tutorial">IfAndElseTutorial</string>
     <string name="game_menu_title">Game Menu</string>
+    <string name="percent_sign">%</string>
+    <string name="tutorial_title">Tutorial</string>
+    <string name="title_activity_for_loop_tutorial">for_loop_tutorial</string>
+    <string name="title_activity_while_loop_tutorial">WhileLoopTutorial</string>
 </resources>
