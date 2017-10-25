@@ -9,145 +9,152 @@
     tools:showIn="@layout/activity_advanced">
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/textView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
         android:layout_marginTop="8dp"
-        android:text="Advanced"
         android:fontFamily="casual"
+        android:text="Advanced"
         android:textAppearance="@android:style/TextAppearance.Material.Large"
         android:textSize="36sp"
         android:textStyle="bold"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginBottom="8dp"
-        />
-
-    <Button
-        android:fontFamily="casual"
-        android:textAllCaps="false"
-        android:id="@+id/if_and_else_butt"
-        android:layout_width="0dp"
-        android:layout_height="60dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:backgroundTint="@color/colorButtTutorial"
-        android:text="If and Else"
-        app:layout_constraintDimensionRatio=""
-        app:layout_constraintHorizontal_chainStyle="spread_inside"
-        app:layout_constraintHorizontal_weight="10"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/textView5"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
-        tools:layout_constraintTop_creator="1"
-        tools:text="If and Else" />
-
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:text="@string/percent_sign"
-        app:layout_constraintHorizontal_weight="1"
-        app:layout_constraintLeft_toRightOf="@+id/if_and_else_butt"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginRight="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/if_and_else_butt"
-        tools:layout_constraintBaseline_creator="1" />
-
-    <Button
-        android:fontFamily="casual"
-        android:textAllCaps="false"
-        android:id="@+id/for_loops_butt"
-        android:layout_width="0dp"
-        android:layout_height="60dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:backgroundTint="@color/colorButtBeginner"
-        android:text="For Loops"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/textView8"
-        app:layout_constraintTop_toBottomOf="@+id/if_and_else_butt" />
-
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:text="@string/percent_sign"
-        app:layout_constraintBaseline_toBaselineOf="@+id/for_loops_butt"
-        app:layout_constraintLeft_toRightOf="@+id/for_loops_butt"
-        app:layout_constraintRight_toRightOf="parent" />
-
-    <Button
-        android:fontFamily="casual"
-        android:textAllCaps="false"
-        android:id="@+id/while_loops_butt"
-        android:layout_width="0dp"
-        android:layout_height="60dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:backgroundTint="@color/colorButtAdvanced"
-        android:text="While Loops"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/textView9"
-        app:layout_constraintTop_toBottomOf="@+id/for_loops_butt" />
-
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:text="@string/percent_sign"
-        app:layout_constraintBaseline_toBaselineOf="@+id/while_loops_butt"
-        app:layout_constraintLeft_toRightOf="@+id/while_loops_butt"
-        app:layout_constraintRight_toRightOf="parent"
-        tools:layout_constraintBaseline_creator="1" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <RatingBar
-        android:id="@+id/ratingBar"
+        android:id="@+id/rating_bar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:numStars="6"
+        app:layout_constraintBottom_toTopOf="@+id/back_butt"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+        android:id="@+id/back_butt"
+        android:backgroundTint="@android:color/holo_blue_light"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
-        android:numStars="3"
-        android:rating="0"
+        android:text="Back to Game Menu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/button7" />
+        android:layout_marginEnd="8dp" />
 
-    <Button
-        android:id="@+id/button7"
+    <GridLayout
+
         android:layout_width="0dp"
-        android:layout_height="50dp"
+        android:layout_height="0dp"
         android:layout_marginBottom="8dp"
-        android:backgroundTint="@android:color/holo_blue_light"
-        android:text="Back To Game Hub"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:background="#f0fffd"
+        android:columnCount="3"
+        android:padding="13dp"
+        android:rowCount="3"
+        app:layout_constraintBottom_toTopOf="@+id/rating_bar"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView12"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_columnSpan="3"
+            android:layout_columnWeight="1"
+            android:layout_row="0"
+            android:fontFamily="casual"
+            android:text="Levels"
+            android:textAlignment="center"
+            android:textAppearance="@android:style/TextAppearance.Material.Large"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/butt_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_row="1"
+            android:layout_rowWeight="1"
+            android:backgroundTint="@color/colorButtBeginner"
+            android:text="@string/_1"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/butt_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_row="1"
+            android:layout_rowWeight="1"
+            android:backgroundTint="@color/colorButtBeginner"
+            android:text="@string/_2"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/butt_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="2"
+            android:layout_columnWeight="1"
+            android:layout_row="1"
+            android:layout_rowWeight="1"
+            android:backgroundTint="@color/colorButtBeginner"
+            android:text="@string/_3"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/butt_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_row="2"
+            android:layout_rowWeight="1"
+            android:backgroundTint="@color/colorButtBeginner"
+            android:text="@string/_4"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/butt_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_row="2"
+            android:layout_rowWeight="1"
+            android:backgroundTint="@color/colorButtBeginner"
+            android:text="@string/_5"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/butt_6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="2"
+            android:layout_columnWeight="1"
+            android:layout_row="2"
+            android:layout_rowWeight="1"
+            android:backgroundTint="@color/colorButtBeginner"
+            android:text="@string/_6"
+            android:textSize="18sp" />
+
+    </GridLayout>
 
 </android.support.constraint.ConstraintLayout>

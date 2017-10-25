@@ -2,6 +2,7 @@ package mossy.littlebits;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -17,6 +18,8 @@ import android.widget.Toast;
 
 public class Login extends AppCompatActivity {
     private LoginDAOHelper loginDAO;
+    private SharedPreferences global_preferences;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -86,17 +89,21 @@ public class Login extends AppCompatActivity {
                     make_toast(error_message);
                 }
                 else {
-                    CharSequence message;
+                    global_preferences = getSharedPreferences("global_preferences", MODE_PRIVATE);
+                    global_preferences.edit()
+                            .putString("username", username)
+                            .apply();
 
-                    // Print usernames;
-                    cursor = loginDAO.getReadableDatabase()
-                            .rawQuery("select * from users", null);
-                    while (cursor.moveToNext()) {
-                        message = ("id: " + cursor.getString(0)
-                                + "\nusername: " + cursor.getString(1)+ "\npassword:" + cursor.getString(2));
-                        make_toast(message);
-                    }
-                    cursor.close();
+//                    CharSequence message;
+//                    // Print usernames;
+//                    cursor = loginDAO.getReadableDatabase()
+//                            .rawQuery("select * from users", null);
+//                    while (cursor.moveToNext()) {
+//                        message = ("id: " + cursor.getString(0)
+//                                + "\nusername: " + cursor.getString(1)+ "\npassword:" + cursor.getString(2));
+//                        make_toast(message);
+//                    }
+//                    cursor.close();
                     startActivity(new Intent(Login.this,GameMenu.class));
             }
             }

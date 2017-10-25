@@ -3,6 +3,7 @@ package mossy.littlebits;
 import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.ColorStateList;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -26,6 +27,7 @@ import android.widget.Toast;
 public class Register extends AppCompatActivity {
 
     private LoginDAOHelper loginDAO;
+    private SharedPreferences global_preferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -163,17 +165,22 @@ public class Register extends AppCompatActivity {
                 }
                 else {
                     add_user(username, password);
-                    CharSequence message;
 
-                    // Print usernames;
-                    cursor = loginDAO.getReadableDatabase()
-                            .rawQuery("select * from users", null);
-                    while (cursor.moveToNext()) {
-                        message = ("id: " + cursor.getString(0)
-                                + "\nusername: " + cursor.getString(1)+ "\npassword: " + cursor.getString(2));
-                        make_toast(message);
-                    }
-                    cursor.close();
+                    global_preferences = getSharedPreferences("global_preferences", MODE_PRIVATE);
+                    global_preferences.edit()
+                            .putString("username", username)
+                            .apply();
+
+//                    CharSequence message;
+//                    // Print usernames;
+//                    cursor = loginDAO.getReadableDatabase()
+//                            .rawQuery("select * from users", null);
+//                    while (cursor.moveToNext()) {
+//                        message = ("id: " + cursor.getString(0)
+//                                + "\nusername: " + cursor.getString(1)+ "\npassword: " + cursor.getString(2));
+//                        make_toast(message);
+//                    }
+//                    cursor.close();
                     startActivity(new Intent(Register.this,GameMenu.class));
                 }
             }

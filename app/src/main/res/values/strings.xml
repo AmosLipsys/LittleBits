@@ -45,4 +45,5 @@
     <string name="title_activity_expert_if_and_else">ExpertIfAndElse</string>
     <string name="title_activity_expert_for_loops">ExpertForLoops</string>
     <string name="title_activity_expert_while_loops">ExpertWhileLoops</string>
+    <string name="title_activity_game">Game</string>
 </resources>
