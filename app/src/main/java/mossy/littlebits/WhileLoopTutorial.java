@@ -1,5 +1,6 @@
 package mossy.littlebits;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -15,11 +16,17 @@ import com.google.android.youtube.player.YouTubePlayerView;
 
 public class WhileLoopTutorial extends YouTubeBaseActivity implements YouTubePlayer.OnInitializedListener {
     private static final String API_KEY = "YOUR API KEY";
-    private static final String VIDEO_ID = "UV2RmC4gDMQ";
+    private static final String VIDEO_ID = "Ga8FiJSSMnY";
+    private SharedPreferences preferences;
+    private SharedPreferences global_preferences;
+    private String username;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_while_loop_tutorial);
+        global_preferences = getSharedPreferences("global_preferences", MODE_PRIVATE);
+        username = global_preferences.getString("username", "");
+        preferences = getSharedPreferences(username, MODE_PRIVATE);
 
         Button finished_button = (Button) findViewById(R.id.finished_butt);
 
@@ -80,6 +87,9 @@ public class WhileLoopTutorial extends YouTubeBaseActivity implements YouTubePla
         }
         @Override
         public void onVideoEnded() {
+            preferences.edit()
+                    .putInt("watched_while_loop", 1)
+                    .apply();
         }
         @Override
         public void onVideoStarted() {

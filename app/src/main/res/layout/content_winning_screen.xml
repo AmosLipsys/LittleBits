@@ -4,69 +4,79 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="mossy.littlebits.IfAndElseTutorial"
-    tools:showIn="@layout/activity_if_and_else_tutorial">
+    tools:context="mossy.littlebits.WinningScreen"
+    tools:showIn="@layout/activity_winning_screen">
 
     <TextView
-        android:id="@+id/difficulty_level_text_view"
+        android:id="@+id/correct_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="If and Else Tutorial"
-        android:fontFamily="casual"
-        android:textAppearance="@android:style/TextAppearance.Material.Large"
-        android:textSize="36sp"
-        android:textStyle="bold"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp" />
-
-    <com.google.android.youtube.player.YouTubePlayerView
-        android:id="@+id/youtube_player"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:background="#fff"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:fontFamily="casual"
+        android:text="Correct"
+        android:textAppearance="@android:style/TextAppearance.Material.Large"
+        android:textSize="36sp"
+        android:textStyle="bold"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/difficulty_level_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="casual"
+        android:text="Difficulty: Level"
+        android:textAppearance="@android:style/TextAppearance.Material.Large"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/correct_text_view" />
+
     <Button
-        android:backgroundTint="@color/colorButtSecondary"
         android:id="@+id/back_butt"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:text="Tutorial Hub"
+        android:backgroundTint="@color/colorButtSecondary"
+        android:text="Level Hub"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@+id/next_butt" />
 
     <Button
-        android:backgroundTint="@color/colorButtMain"
         android:id="@+id/next_butt"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:text="Next(For Loops)"
+        android:backgroundTint="@color/colorButtMain"
+        android:text="Next Level"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toRightOf="@+id/back_butt"
         app:layout_constraintRight_toRightOf="parent" />
 
-</android.support.constraint.ConstraintLayout>
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:scaleType="center"
+        app:layout_constraintBottom_toTopOf="@+id/back_butt"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/difficulty_level_text_view"
+        app:srcCompat="@drawable/splash_page" />
 
+</android.support.constraint.ConstraintLayout>

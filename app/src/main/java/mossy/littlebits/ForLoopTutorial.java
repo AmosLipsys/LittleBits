@@ -1,5 +1,6 @@
 package mossy.littlebits;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -15,12 +16,17 @@ import com.google.android.youtube.player.YouTubePlayerView;
 
 public class ForLoopTutorial extends YouTubeBaseActivity implements YouTubePlayer.OnInitializedListener {
     private static final String API_KEY = "YOUR API KEY";
-    private static final String VIDEO_ID = "UV2RmC4gDMQ";
+    private static final String VIDEO_ID = "hfEcIo9jQMI";
+    private SharedPreferences preferences;
+    private SharedPreferences global_preferences;
+    private String username;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_for_loop_tutorial);
-
+        global_preferences = getSharedPreferences("global_preferences", MODE_PRIVATE);
+        username = global_preferences.getString("username", "");
+        preferences = getSharedPreferences(username, MODE_PRIVATE);
         Button next_button = (Button) findViewById(R.id.next_butt);
         Button back_button = (Button) findViewById(R.id.back_butt);
 
@@ -89,6 +95,9 @@ public class ForLoopTutorial extends YouTubeBaseActivity implements YouTubePlaye
         }
         @Override
         public void onVideoEnded() {
+            preferences.edit()
+                    .putInt("watched_for_loop", 1)
+                    .apply();
         }
         @Override
         public void onVideoStarted() {

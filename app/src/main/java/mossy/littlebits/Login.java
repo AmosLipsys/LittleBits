@@ -14,6 +14,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class Login extends AppCompatActivity {
@@ -32,8 +33,10 @@ public class Login extends AppCompatActivity {
         final EditText edit_username = (EditText) findViewById(R.id.edit_username);
         final EditText edit_password = (EditText) findViewById(R.id.edit_password);
         CheckBox check_show_password = (CheckBox) findViewById(R.id.check_show_password);
+        TextView create_an_account_text_view = (TextView) findViewById(R.id.create_an_account);
         Button butt_login = (Button) findViewById(R.id.butt_login);
         loginDAO = new LoginDAOHelper(this);
+
 
         // Show Password
         check_show_password.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -44,6 +47,13 @@ public class Login extends AppCompatActivity {
                 } else {
                     edit_password.setInputType(129);
                 }
+            }
+        });
+
+        create_an_account_text_view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Login.this,Register.class));
             }
         });
 

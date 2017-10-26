@@ -46,4 +46,9 @@
     <string name="title_activity_expert_for_loops">ExpertForLoops</string>
     <string name="title_activity_expert_while_loops">ExpertWhileLoops</string>
     <string name="title_activity_game">Game</string>
+    <string name="title_activity_winning_screen">WinningScreen</string>
+    <string name="title_activity_losing_screen">LosingScreen</string>
+    <string name="unwatched">Unwatched</string>
+    <string name="watched">Already Seen</string>
+    <string name="Finished">Finished!</string>
 </resources>

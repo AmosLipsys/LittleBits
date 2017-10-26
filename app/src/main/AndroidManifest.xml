@@ -128,7 +128,25 @@
         <activity
             android:name=".Game"
             android:label="@string/title_activity_game"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".WinningScreen"
+            android:label="@string/title_activity_winning_screen"
+            android:parentActivityName=".Game"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="mossy.littlebits.Game" />
+        </activity>
+        <activity
+            android:name=".LosingScreen"
+            android:label="@string/title_activity_losing_screen"
+            android:parentActivityName=".Game"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="mossy.littlebits.Game" />
+        </activity>
     </application>
 
 </manifest>

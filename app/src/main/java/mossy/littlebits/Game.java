@@ -219,14 +219,14 @@ public class Game extends AppCompatActivity {
                 .putInt("level",level)
                 .putInt(current_difficultly, max_level)
                 .apply();
-        String toast_message = "Now up to level " + Integer.toString(preferences.getInt(current_difficultly, level)) + "at difficultly level " + current_difficultly;
-        Toast.makeText(this, toast_message , Toast.LENGTH_LONG).show();
+//        String toast_message = "Now up to level " + Integer.toString(preferences.getInt(current_difficultly, level)) + "at difficultly level " + current_difficultly;
+//        Toast.makeText(this, toast_message , Toast.LENGTH_LONG).show();
 
-        startActivity(new Intent(Game.this,Game.class));
+        startActivity(new Intent(Game.this,WinningScreen.class));
     }
     private void incorrect_answer(){
-        Toast.makeText(this, "Incorrect :(", Toast.LENGTH_LONG).show();
-        startActivity(new Intent(Game.this,Game.class));
+//        Toast.makeText(this, "Incorrect :(", Toast.LENGTH_LONG).show();
+        startActivity(new Intent(Game.this,LosingScreen.class));
     }
 
 }

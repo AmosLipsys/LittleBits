@@ -39,12 +39,12 @@
         app:layout_constraintHorizontal_chainStyle="spread_inside"
         app:layout_constraintHorizontal_weight="10"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/textView5"
+        app:layout_constraintRight_toLeftOf="@+id/tutorial_text_view"
         tools:layout_constraintTop_creator="1"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/tutorial_text_view"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:text="@string/tutorial_percent"
@@ -52,7 +52,8 @@
         app:layout_constraintLeft_toRightOf="@+id/if_and_else_butt"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBaseline_toBaselineOf="@+id/if_and_else_butt"
-        tools:layout_constraintBaseline_creator="1" />
+        tools:layout_constraintBaseline_creator="1"
+        android:layout_marginLeft="8dp" />
 
     <Button
         android:fontFamily="casual"
@@ -63,17 +64,18 @@
         android:backgroundTint="@color/colorButtBeginner"
         android:text="@string/beginner"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/textView8"
+        app:layout_constraintRight_toLeftOf="@+id/beginner_text_view"
         app:layout_constraintTop_toBottomOf="@+id/if_and_else_butt" />
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/beginner_text_view"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:text="@string/beginner_percent"
         app:layout_constraintBaseline_toBaselineOf="@+id/beginner_butt"
         app:layout_constraintLeft_toRightOf="@+id/beginner_butt"
-        app:layout_constraintRight_toRightOf="parent" />
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="8dp" />
 
     <Button
         android:fontFamily="casual"
@@ -84,18 +86,19 @@
         android:backgroundTint="@color/colorButtAdvanced"
         android:text="@string/advanced"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/textView9"
+        app:layout_constraintRight_toLeftOf="@+id/advanced_text_view"
         app:layout_constraintTop_toBottomOf="@+id/beginner_butt" />
 
     <TextView
-        android:id="@+id/textView9"
+        android:id="@+id/advanced_text_view"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:text="@string/advanced_percent"
         app:layout_constraintBaseline_toBaselineOf="@+id/advanced_butt"
         app:layout_constraintRight_toRightOf="parent"
         tools:layout_constraintBaseline_creator="1"
-        app:layout_constraintLeft_toRightOf="@+id/advanced_butt" />
+        app:layout_constraintLeft_toRightOf="@+id/advanced_butt"
+        android:layout_marginLeft="8dp" />
 
     <Button
         android:fontFamily="casual"
@@ -106,19 +109,21 @@
         android:backgroundTint="@color/colorButtExpert"
         android:text="@string/expert"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/textView10"
+        app:layout_constraintRight_toLeftOf="@+id/expert_text_view"
         app:layout_constraintTop_toBottomOf="@+id/advanced_butt" />
 
     <TextView
-        android:id="@+id/textView10"
+        android:id="@+id/expert_text_view"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:text="@string/expert_percent"
         app:layout_constraintLeft_toRightOf="@+id/expert_butt"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBaseline_toBaselineOf="@+id/expert_butt" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/expert_butt"
+        android:layout_marginLeft="8dp" />
 
     <RatingBar
+        android:isIndicator="true"
         android:id="@+id/rating_bar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

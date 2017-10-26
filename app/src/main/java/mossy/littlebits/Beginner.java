@@ -30,6 +30,7 @@ public class Beginner extends AppCompatActivity {
 
         RatingBar rating_bar = (RatingBar) findViewById(R.id.rating_bar) ;
 
+        Button butt_back = (Button) findViewById(R.id.back_butt);
         Button butt_1 = (Button) findViewById(R.id.butt_1);
         Button butt_2 = (Button) findViewById(R.id.butt_2);
         Button butt_3 = (Button) findViewById(R.id.butt_3);
@@ -39,8 +40,10 @@ public class Beginner extends AppCompatActivity {
 
         Button[] butt_group =  {butt_1, butt_2, butt_3, butt_4,butt_5,butt_6};
         int max_level = preferences.getInt("Beginner", 1);
-        int rating = Math.min(max_level, butt_group.length) * 2;
-        rating_bar.setProgress(rating);
+        int rating = Math.min(max_level-1, butt_group.length) ;
+        rating_bar.setProgress(rating* 2);
+        float percent_rating = rating*100/rating_bar.getNumStars();
+        preferences.edit().putFloat("beginner_percentage", percent_rating).apply();
 
         // Disable and Enable Butts
         for (Button button :butt_group){
@@ -49,62 +52,56 @@ public class Beginner extends AppCompatActivity {
         for (int i = 0; i < max_level && i < butt_group.length; i++){
              butt_group[i].setEnabled(true);
         }
-
+        butt_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Beginner.this,GameMenu.class));
+            }
+        });
         butt_1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                preferences.edit()
-                        .putInt("level", 1)
-                        .apply();
-                startActivity(new Intent(Beginner.this,Game.class));
+                on_to_game(1);
             }
         });
         butt_2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                preferences.edit()
-                        .putInt("level", 2)
-                        .apply();
-                startActivity(new Intent(Beginner.this,Game.class));
+                on_to_game(2);
             }
         });
         butt_3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                preferences.edit()
-                        .putInt("level", 3)
-                        .apply();
-                startActivity(new Intent(Beginner.this,Game.class));
+                on_to_game(3);
             }
         });
         butt_4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                preferences.edit()
-                        .putInt("level", 4)
-                        .apply();
-                startActivity(new Intent(Beginner.this,Game.class));
+                on_to_game(4);
             }
         });
         butt_5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                preferences.edit()
-                        .putInt("level", 5)
-                        .apply();
-                startActivity(new Intent(Beginner.this,Game.class));
+                on_to_game(5);
             }
         });
         butt_6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                preferences.edit()
-                        .putInt("level", 6)
-                        .apply();
-                startActivity(new Intent(Beginner.this,Game.class));
+                on_to_game(6);
             }
         });
 
+    }
+
+    private void on_to_game(int level){
+        preferences.edit()
+                .putInt("level", level)
+                .apply();
+        startActivity(new Intent(Beginner.this,Game.class));
     }
 
 }

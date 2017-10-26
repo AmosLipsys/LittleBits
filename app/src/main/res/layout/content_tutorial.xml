@@ -43,13 +43,13 @@
         app:layout_constraintHorizontal_chainStyle="spread_inside"
         app:layout_constraintHorizontal_weight="10"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/textView5"
+        app:layout_constraintRight_toLeftOf="@+id/if_else_text_view"
         app:layout_constraintTop_toBottomOf="@+id/textView3"
         tools:layout_constraintTop_creator="1"
         tools:text="If and Else" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/if_else_text_view"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:text="@string/percent_sign"
@@ -77,11 +77,11 @@
         android:backgroundTint="@color/colorButtBeginner"
         android:text="For Loops"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/textView8"
+        app:layout_constraintRight_toLeftOf="@+id/for_loop_text_view"
         app:layout_constraintTop_toBottomOf="@+id/if_and_else_butt" />
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/for_loop_text_view"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -107,11 +107,11 @@
         android:backgroundTint="@color/colorButtAdvanced"
         android:text="While Loops"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/textView9"
+        app:layout_constraintRight_toLeftOf="@+id/while_loop_text_view"
         app:layout_constraintTop_toBottomOf="@+id/for_loops_butt" />
 
     <TextView
-        android:id="@+id/textView9"
+        android:id="@+id/while_loop_text_view"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -125,6 +125,7 @@
         tools:layout_constraintBaseline_creator="1" />
 
     <RatingBar
+        android:isIndicator="true"
         android:id="@+id/rating_bar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -137,10 +138,10 @@
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/button7" />
+        app:layout_constraintBottom_toTopOf="@+id/back_to_game_hub_butt" />
 
     <Button
-        android:id="@+id/button7"
+        android:id="@+id/back_to_game_hub_butt"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginBottom="8dp"

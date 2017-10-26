@@ -31,7 +31,7 @@ public class Advanced extends AppCompatActivity {
                 .apply();
 
         RatingBar rating_bar = (RatingBar) findViewById(R.id.rating_bar) ;
-
+        Button butt_back = (Button) findViewById(R.id.back_butt);
         Button butt_1 = (Button) findViewById(R.id.butt_1);
         Button butt_2 = (Button) findViewById(R.id.butt_2);
         Button butt_3 = (Button) findViewById(R.id.butt_3);
@@ -41,8 +41,10 @@ public class Advanced extends AppCompatActivity {
 
         Button[] butt_group =  {butt_1, butt_2, butt_3, butt_4,butt_5,butt_6};
         int max_level = preferences.getInt("Advanced", 1);
-        int rating = Math.min(max_level, butt_group.length) * 2;
-        rating_bar.setProgress(rating);
+        int rating = Math.min(max_level -1 , butt_group.length) ;
+        rating_bar.setProgress(rating* 2);
+        float percent_rating = rating*100/rating_bar.getNumStars();
+        preferences.edit().putFloat("advanced_percentage", percent_rating).apply();
 
         // Disable and Enable Butts
         for (Button button :butt_group){
@@ -52,7 +54,12 @@ public class Advanced extends AppCompatActivity {
             butt_group[i].setEnabled(true);
         }
 
-
+        butt_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Advanced.this,GameMenu.class));
+            }
+        });
         butt_1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
